@@ -42,3 +42,11 @@ def shift_n_letters(letter, n):
     if ord(result) > 122:
         return chr(96+ ord(result) - 122) 
     return result
+
+def shift_n_letters(letter, n):
+    val = ord(letter)+n
+    if val>122:
+        return chr(val-26)
+    elif val<97:
+        return chr(val+26)
+    return chr(val)
